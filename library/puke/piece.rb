@@ -19,6 +19,11 @@ module Puke
     
     def token; @attributes["Url"][/\w+$/] end
     
+    def url
+      name = self.name.gsub(/[^\s\w]/, '').gsub ' ', '+'
+      %{http://listen.grooveshark.com/#/s/#{name}/#{token}}
+    end
+    
     def to_s
       %{#<#{self.class.name}:#{id} @name=#{name.inspect} @artist=#{artist.inspect} @album=#{album.inspect}>}
     end
