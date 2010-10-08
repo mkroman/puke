@@ -20,7 +20,7 @@ module Puke
     def token; @attributes["Url"][/\w+$/] end
     
     def url
-      name = self.name.gsub(/[^\s\w]/, '').gsub ' ', '+'
+      name = self.title.gsub(/[^\s\w]/, '').gsub ' ', '+'
       %{http://listen.grooveshark.com/#/s/#{name}/#{token}}
     end
     
