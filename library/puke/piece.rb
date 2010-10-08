@@ -9,7 +9,7 @@ module Puke
     end
     
     attribute :id, :SongID
-    attribute :name,   :SongName
+    attribute :title,  :SongName
     attribute :artist, :ArtistName
     attribute :album,  :AlbumName
     

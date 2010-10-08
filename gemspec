@@ -1,0 +1,17 @@
+#!/usr/bin/gem build
+# encoding: utf-8
+
+Gem::Specification.new do |s|
+  s.name    = "Puke"
+  s.version = "0.0.1"
+  s.summary = "Puke is a minimal grooveshark library for ruby, using the Tinysong.com api instead of grooveshark.com"
+
+  s.author  = "Mikkel Kroman"
+  s.email   = "mk@maero.dk"
+
+  s.files = Dir['library/**/*.rb']
+  s.bindir = "executables"
+  s.has_rdoc = false
+  s.require_path = "library"
+  s.required_ruby_version = ">= 1.9.1"
+end
