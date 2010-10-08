@@ -21,7 +21,7 @@ module Puke
     
     def url
       name = self.title.gsub(/[^\s\w]/, '').gsub ' ', '+'
-      %{http://listen.grooveshark.com/#/s/#{name}/#{token}}
+      %{http://tinysong.com/#{token}}
     end
     
     def to_s
