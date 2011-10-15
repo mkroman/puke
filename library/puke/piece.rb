@@ -8,7 +8,7 @@ module Puke
       end
     end
     
-    attribute :id, :SongID
+    attribute :id,     :SongID
     attribute :title,  :SongName
     attribute :artist, :ArtistName
     attribute :album,  :AlbumName
@@ -25,7 +25,7 @@ module Puke
     end
     
     def to_s
-      %{#<#{self.class.name}:#{id} @name=#{name.inspect} @artist=#{artist.inspect} @album=#{album.inspect}>}
+      %{#<#{self.class.name}:#{id} @title=#{title.inspect} @artist=#{artist.inspect} @album=#{album.inspect}>}
     end
   end
 end

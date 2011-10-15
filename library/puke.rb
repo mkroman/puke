@@ -1,19 +1,22 @@
 # encoding: utf-8
 
-require 'tinysong'
-require 'net/http'
+require 'cgi'
 require 'json'
+require 'open-uri'
+
+require 'puke/piece'
 
 module Puke
-  Version = 0, 0, 1
-  
-module_function
+  Version = "0.0.2"
 
-  def search query
-    Tinysong.search(query).tap do |result|
-      result.each { |song| yield song } if block_given?
+  def self.search query, key
+    pieces = []
+
+    open "http://tinysong.com/s/#{URI.escape query}?format=json&key=#{key}" do |response|
+      songs  = JSON.parse response.read
+      pieces = songs.map &Piece.method(:new)
     end
+
+    pieces
   end
-  
-  def client; @client ||= Client.new end
 end

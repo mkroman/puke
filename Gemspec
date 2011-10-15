@@ -3,7 +3,7 @@
 
 Gem::Specification.new do |s|
   s.name    = "Puke"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.summary = "Puke is a minimal grooveshark library for ruby, using the Tinysong.com api instead of grooveshark.com"
 
   s.author  = "Mikkel Kroman"
